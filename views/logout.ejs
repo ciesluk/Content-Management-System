@@ -1,0 +1,30 @@
+<%-include('layouts/header'); -%>
+<body>
+    <!--Header-->
+    <header>
+        <img src="images/school.png" alt="Blog Logo" height="130">
+        <h1>Tom's School Blog</h1>
+        <h2>Lets write some fun posts!</h2>
+    </header>
+    <!--Navigation Menu-->
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <%
+                for(var page of pages){
+                    %>
+                        <li><a href="<%= page._id %>"><%= page.pageTitle %></a></li>
+                    <%
+                }
+            %>
+        </ul>
+    </nav>
+    <!--Main Section-->
+    <main class="logoutMain">
+        <br>
+        <h1>Logout</h1>
+        <p>You have successfully logged out!</p>
+    </main>
+    <!--Footer-->
+<%- include('layouts/footer'); -%>

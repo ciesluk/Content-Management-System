@@ -1,0 +1,36 @@
+<%-include('layouts/header'); -%>
+<body>
+    <!--Header-->
+    <header>
+        <img src="images/school.png" alt="Blog Logo" height="130">
+        <h1>Tom's School Blog</h1>
+        <h2>Lets write some fun posts!</h2>
+    </header>
+    <!--Navigation Menu-->
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <%
+                for(var page of pages){
+                    %>
+                        <li><a href="<%= page._id %>"><%= page.pageTitle %></a></li>
+                    <%
+                }
+            %>
+        </ul>
+    </nav>
+    <!--Login form to get the username and password-->
+    <main class="loginMain">
+        <br>
+        <h2>Login</h2>
+        <form action="" name="myForm" method="POST">
+            <label>Username:</label>
+            <input type="text" name="username" id="username"><br>
+            <label>Password:</label>
+            <input type="password" name="password" id="password"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <!--Footer-->
+<%- include('layouts/footer'); -%>

@@ -1,0 +1,38 @@
+<%-include('layouts/header'); -%>
+<body>
+    <!--Header-->
+    <header>
+        <img src="images/school.png" alt="Blog Logo" height="130">
+        <h1>Tom's School Blog</h1>
+        <h2>Lets write some fun posts!</h2>
+    </header>
+    <!--Navigation Menu-->
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <%
+                for(var page of pages){
+                    %>
+                        <li><a href="<%= page._id %>"><%= page.pageTitle %></a></li>
+                    <%
+                }
+            %>
+        </ul>
+    </nav>
+    <!--Main section just displays a image, title and some page description-->
+    <main>
+        <img src="images/school_home_main.jpeg" alt="Home Main Hero Image"> 
+        <h2>Welcome to my Blog!</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed velit eaque, quam totam 
+            explicabo nesciunt dolorem quibusdam suscipit odit omnis nobis deleniti temporibus 
+            deserunt hic quidem laboriosam quas facilis nisi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed velit eaque, quam totam 
+            explicabo nesciunt dolorem quibusdam suscipit odit omnis nobis deleniti temporibus 
+            deserunt hic quidem laboriosam quas facilis nisi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed velit eaque, quam totam 
+            explicabo nesciunt dolorem quibusdam suscipit odit omnis nobis deleniti temporibus 
+            deserunt hic quidem laboriosam quas facilis nisi!</p>
+    </main>
+    <!--Footer-->
+<%- include('layouts/footer'); -%>

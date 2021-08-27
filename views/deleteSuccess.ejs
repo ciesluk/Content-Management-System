@@ -1,0 +1,18 @@
+<%- include('layouts/header'); -%>
+<body>
+    <!--Header-->
+    <header>
+        <img src="/images/school.png" alt="Blog Logo" height="130">
+        <h1>Tom's School Blog</h1>
+        <h2>Welcome, this is the administration page!</h2>
+    </header>
+    <!--Navigation Menu-->
+    <%- include('layouts/admin_nav'); -%>
+    <!--Main section, displaying delete message-->
+    <main class="adminPage">
+        <br>
+        <h1>Delete Page</h1>
+        <p> <%= message %> </p>
+    </main>
+    <!--Footer-->
+<%- include('layouts/footer'); -%>

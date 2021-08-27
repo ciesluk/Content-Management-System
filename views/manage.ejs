@@ -1,0 +1,36 @@
+<%- include('layouts/header'); -%>
+<body>
+    <header>
+        <img src="images/school.png" alt="Blog Logo" height="130">
+        <h1>Tom's School Blog</h1>
+        <h2>Welcome, this is the administration page!</h2>
+    </header>
+    <%- include('layouts/admin_nav'); -%>
+    <main>
+        <br>
+        <h1 id="addTitle">Edit Pages</h1>
+        <!-- Table that will display the page name, and an option to delete of edit the page-->
+        <table>
+            <thead>
+                <tr>
+                    <th>Page Name</th>
+                    <th>Manage</th>
+                    <th>Manage</th>
+                </tr> 
+            </thead>
+            <tbody>
+                <%
+                    for(var page of pages){
+                        %>
+                            <tr>
+                                <td><%= page.pageTitle %></td>
+                                <td><a href="/deleteSuccess/<%= page._id %>">Delete</a></td>
+                                <td><a href="/editPage/<%= page._id %>">Edit</a></td>
+                            </tr>
+                        <%
+                    }
+                %>
+            </tbody>
+        </table>
+    </main>
+<%- include('layouts/footer'); -%>
