@@ -7,7 +7,7 @@ const fileUpload = require('express-fileupload');
 
 //set up database
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/tomsblog', {
+mongoose.connect('mongodb://(Add your host here)/schoolblog', {
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
