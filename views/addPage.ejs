@@ -1,0 +1,51 @@
+<%- include('layouts/header'); -%>
+<body>
+    <!--Header-->
+    <header>
+        <img src="images/school.png" alt="Blog Logo" height="130">
+        <h1>Tom's School Blog</h1>
+        <h2>Welcome, this is the administration page!</h2>
+    </header>
+    <!--Navigation menu-->
+    <%- include('layouts/admin_nav'); -%>
+    <main>
+        <br>
+        <h1 id="addTitle">Add Page</h1>
+        <!--Errors will be displayed here-->
+        <div>
+            <%
+                if(typeof(errors) != 'undefined'){
+                    for(var error of errors){
+                        %>
+                            <p class="errors"><%= error.msg %></p>
+                        <%
+                    }
+                }
+            %>
+        </div>
+        <!--Form to get the page title, page description and image from user-->
+        <form action="process" method="post" enctype="multipart/form-data" class="addPageStyles">
+            <label for="pageTitle">Page Title:</label>
+            <input type="text" id="pageTitle" name="pageTitle"><br>
+            <label for="heroImage">Hero Image:</label>
+            <input type="file" id="heroImage" name="heroImage"><br>
+            <input type="text" id="pageDescription" name="pageDescription"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+    <!--Adding TinyMCE here-->
+    <!--Add JQuery here-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!--Add TinyMCE js and jquery-->
+    <script src="js/tinymce/jquery.tinymce.min.js"></script>
+    <script src="js/tinymce/tinymce.min.js"></script>
+
+    <script>
+        tinymce.init({
+            selector: '#pageDescription',
+            height: 350,
+            menubar: false
+        });
+    </script>
+    <!--Footer-->
+<%- include('layouts/footer'); -%>
