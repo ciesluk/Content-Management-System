@@ -1,0 +1,147 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 1000px;
+    margin: 0 auto;
+    border: 3px solid black;
+    background-color: aliceblue;
+}
+
+/*Header Styles*/
+
+header{
+    border-bottom: 3px solid black;
+    padding: 1.5em 0;
+    background-color: #F7A072;
+}
+
+header img{
+    float: left;
+    padding: 0 20px;
+}
+
+header h1{
+    font-size: 200%;
+}
+
+header h2{
+    font-size: 120%;
+    font-style: italic;
+}
+
+/*Main Styles*/
+
+main{
+    background-color: #EDDEA4;
+    padding: 1em;
+}
+
+main img{
+    width: 100%;
+    height: 400px;
+    border: 2px solid black;
+}
+
+.loginMain{
+    text-align: center;
+}
+
+/*Navigation Menu Styles*/
+
+#nav_menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav_menu ul li{
+    float: left;
+}
+
+#nav_menu ul li a{
+    display: block;
+    width: 130px;
+    padding: 1em 0;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*Login Styles*/
+
+label{
+    width: 170px;
+    display: inline-block;
+    font-size: 18px;
+    color: black;
+}
+
+input[type="submit"]{
+    background-color: rgb(79, 150, 209);
+    width: 100px;
+    font-weight: bold;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+/*--------Footer styles---------*/
+
+footer{
+    background-color: #F7A072;;
+    border-top: 2px solid black;
+    padding: 1em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.adminPage{
+    text-align: center;
+}
+
+.logoutMain{
+    text-align: center;
+}
+
+/*Add page styles*/
+
+.addPageStyles label{
+    width: 150px;
+    display: inline-block;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+.addPageStyles input{
+    font-size: 20px;
+}
+
+#addTitle{
+    text-align: center;
+}
+
+/*Table styles*/
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+thead{
+    background-color: lightcoral;
+}
+
+td a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+th,td{
+    padding: 1em 4em;
+    border: 2px solid black;
+}
