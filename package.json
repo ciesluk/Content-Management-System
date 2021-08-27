@@ -1,0 +1,24 @@
+{
+  "name": "finalproject",
+  "version": "1.0.0",
+  "description": "Final project for web design and development",
+  "main": "index.js",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.12.1",
+    "mongoose": "^5.13.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "final",
+    "project"
+  ],
+  "author": "Tom Cieslukowski",
+  "license": "ISC"
+}
